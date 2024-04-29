@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu contador</title>
+    <title>Meu refresh</title>
     <!--aqui e onde eu customizo certas partes.-->
     <style>
         * {
@@ -21,13 +21,17 @@
             background-color: grey;
             padding: 20px;
             border-radius: 10px;
+            padding-left: 100px;
+            padding-right: 100px;
         }
         p{
-            font-size: 100px ;
+            font-size: 180px ;
             background-color: grey;
+            
 
         }
         h1{
+            font-size: 50px;
 
         }
 
@@ -43,25 +47,27 @@
 <body>
     <section>
         <h1>CONTADOR</h1>
-        <p= id="variante">0</p> 
+        <p id="variante">0</p> 
         <button onclick="aumentar()" >aumentar</button>
         <button onclick="diminuir()">diminuir</button>
     </section>
+    <!--essa e a logica-->
     <script>
-        let numero = 0
+
+        let numero = 0;
 
         function aumentar() {
-            numero = numero +1
-            contador()
+            numero = numero +1;
+            refresh();
         }
         function diminuir() {
-            numero = numero -1
-            contador()
+            numero = numero -1;
+            refresh();
         }
-         function = contador() {
-            const p = document.querySelector ()
-            p.innerText = numero
-            console.log (numero)
+         function  refresh() {
+            const p = document.querySelector ("#variante");
+            p.innerText = numero;
+            console.log (numero);
 
          }
     </script>    
